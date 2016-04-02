@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftChess.Inc.Core", "app\SoftChess.Inc.Core\SoftChess.Inc.Core.csproj", "{4FADA86E-8AC0-47BD-972B-B9562304ED73}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{5377CFCB-1563-4649-AAB8-F6EC6414F49D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{F94FF7CA-6F73-47FE-AE49-0C8FEBF11E6F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{F8DD03D7-6BD3-40E2-A3EE-66F7A5DDEE6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftChess.Inc.Api.Web", "app\SoftChess.Inc.Api.Web\SoftChess.Inc.Api.Web.csproj", "{F3EA5DAA-70BB-44F4-8E4C-44F2DD2676C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{A9C5BC88-F87F-4110-A44F-9A93F56EF516}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftChess.Inc.Api.Web.Tests", "test\SoftChess.Inc.Api.Web.Tests\SoftChess.Inc.Api.Web.Tests.csproj", "{52723A15-3B0C-4382-A212-98CC9BFEAE1F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{8887CB99-5727-4776-804F-D0B24DB53DAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftChess.Inc.Clients.Web", "app\SoftChess.Inc.Clients.Web\SoftChess.Inc.Clients.Web.csproj", "{5809D571-2AB5-4550-9879-93A74A53D533}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataProxies", "DataProxies", "{B8F2A2DF-D940-4017-87F9-7A2D858BCD15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftChess.Inc.Data.DataProxies", "app\SoftChess.Inc.Data.DataProxies\SoftChess.Inc.Data.DataProxies.csproj", "{9D67D13B-3C6E-4B70-8A1B-FE372BEF4093}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftChess.Inc.Data.DataProxies.Mongo", "app\SoftChess.Inc.Data.DataProxies.Mongo\SoftChess.Inc.Data.DataProxies.Mongo.csproj", "{3856B013-373F-4DB3-BF9B-EAFE4147837E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DBProviders", "DBProviders", "{1E6C4079-B126-4633-A192-B5C9B8563DED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftChess.Inc.Data.DBProviders.Mongo", "app\SoftChess.Inc.Data.DBProviders.Mongo\SoftChess.Inc.Data.DBProviders.Mongo.csproj", "{F5E9DFCC-047B-4597-A537-43F626855DAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FADA86E-8AC0-47BD-972B-B9562304ED73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FADA86E-8AC0-47BD-972B-B9562304ED73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FADA86E-8AC0-47BD-972B-B9562304ED73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FADA86E-8AC0-47BD-972B-B9562304ED73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3EA5DAA-70BB-44F4-8E4C-44F2DD2676C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3EA5DAA-70BB-44F4-8E4C-44F2DD2676C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3EA5DAA-70BB-44F4-8E4C-44F2DD2676C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3EA5DAA-70BB-44F4-8E4C-44F2DD2676C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52723A15-3B0C-4382-A212-98CC9BFEAE1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52723A15-3B0C-4382-A212-98CC9BFEAE1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52723A15-3B0C-4382-A212-98CC9BFEAE1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52723A15-3B0C-4382-A212-98CC9BFEAE1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5809D571-2AB5-4550-9879-93A74A53D533}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5809D571-2AB5-4550-9879-93A74A53D533}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5809D571-2AB5-4550-9879-93A74A53D533}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5809D571-2AB5-4550-9879-93A74A53D533}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D67D13B-3C6E-4B70-8A1B-FE372BEF4093}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D67D13B-3C6E-4B70-8A1B-FE372BEF4093}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D67D13B-3C6E-4B70-8A1B-FE372BEF4093}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D67D13B-3C6E-4B70-8A1B-FE372BEF4093}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3856B013-373F-4DB3-BF9B-EAFE4147837E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3856B013-373F-4DB3-BF9B-EAFE4147837E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3856B013-373F-4DB3-BF9B-EAFE4147837E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3856B013-373F-4DB3-BF9B-EAFE4147837E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5E9DFCC-047B-4597-A537-43F626855DAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5E9DFCC-047B-4597-A537-43F626855DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5E9DFCC-047B-4597-A537-43F626855DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5E9DFCC-047B-4597-A537-43F626855DAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4FADA86E-8AC0-47BD-972B-B9562304ED73} = {5377CFCB-1563-4649-AAB8-F6EC6414F49D}
+		{F3EA5DAA-70BB-44F4-8E4C-44F2DD2676C0} = {F8DD03D7-6BD3-40E2-A3EE-66F7A5DDEE6D}
+		{52723A15-3B0C-4382-A212-98CC9BFEAE1F} = {A9C5BC88-F87F-4110-A44F-9A93F56EF516}
+		{5809D571-2AB5-4550-9879-93A74A53D533} = {8887CB99-5727-4776-804F-D0B24DB53DAC}
+		{B8F2A2DF-D940-4017-87F9-7A2D858BCD15} = {F94FF7CA-6F73-47FE-AE49-0C8FEBF11E6F}
+		{9D67D13B-3C6E-4B70-8A1B-FE372BEF4093} = {B8F2A2DF-D940-4017-87F9-7A2D858BCD15}
+		{3856B013-373F-4DB3-BF9B-EAFE4147837E} = {B8F2A2DF-D940-4017-87F9-7A2D858BCD15}
+		{1E6C4079-B126-4633-A192-B5C9B8563DED} = {F94FF7CA-6F73-47FE-AE49-0C8FEBF11E6F}
+		{F5E9DFCC-047B-4597-A537-43F626855DAB} = {1E6C4079-B126-4633-A192-B5C9B8563DED}
+	EndGlobalSection
+EndGlobal

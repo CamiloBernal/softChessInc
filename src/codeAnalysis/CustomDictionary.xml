@@ -1,0 +1,39 @@
+﻿<Dictionary>
+  <Words>
+    <Unrecognized>
+      <Word></Word>
+    </Unrecognized>
+    <Recognized>
+      <Word>Api</Word>
+      <Word>Chess</Word>
+      <Word>Movement</Word>
+      <Word>Game</Word>
+      <Word>Block</Word>
+      <Word>Piece</Word>
+      <Word>Player</Word>
+      <Word>Position</Word>
+      <Word>King</Word>
+      <Word>Rook</Word>
+      <Word>Pawn</Word>
+      <Word>Knight</Word>
+      <Word>Sgm</Word>
+      <Word>Queen</Word>
+      <Word>Bishop</Word>
+      <Word>Rule</Word>
+    </Recognized>
+    <Deprecated>
+      <Term PreferredAlternate=""></Term>
+    </Deprecated>
+    <Compound>
+      <Term CompoundAlternate=""></Term>
+    </Compound>
+    <DiscreteExceptions>
+      <Term></Term>
+    </DiscreteExceptions>
+  </Words>
+  <!--<Acronyms>
+    <CasingExceptions>
+      <Acronym>XML</Acronym>
+    </CasingExceptions>
+  </Acronyms>-->
+</Dictionary>
