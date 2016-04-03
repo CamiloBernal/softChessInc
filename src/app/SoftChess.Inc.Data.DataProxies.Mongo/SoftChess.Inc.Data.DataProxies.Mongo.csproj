@@ -21,6 +21,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>..\..\codeAnalysis\softChessIncAll.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,6 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MongoDB.Bson, Version=2.2.3.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\MongoDB.Bson.2.2.3\lib\net45\MongoDB.Bson.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,12 +46,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PersistenceServices\PersistenceServiceBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SoftChess.Inc.Data.DataProxies\SoftChess.Inc.Data.DataProxies.csproj">
+      <Project>{9d67d13b-3c6e-4b70-8a1b-fe372bef4093}</Project>
+      <Name>SoftChess.Inc.Data.DataProxies</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SoftChess.Inc.Data.DBProviders.Mongo\SoftChess.Inc.Data.DBProviders.Mongo.csproj">
       <Project>{f5e9dfcc-047b-4597-a537-43f626855dab}</Project>
       <Name>SoftChess.Inc.Data.DBProviders.Mongo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SoftChess.Inc.Data\SoftChess.Inc.Data.csproj">
+      <Project>{69320531-6D23-4714-9CA0-C180C2E1F3EB}</Project>
+      <Name>SoftChess.Inc.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
