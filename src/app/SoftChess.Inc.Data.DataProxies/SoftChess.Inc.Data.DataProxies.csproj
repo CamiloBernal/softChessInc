@@ -43,7 +43,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IDataProxy.cs" />
+    <Compile Include="IHistoricalPersistence.cs" />
+    <Compile Include="IPiecePersistence.cs" />
+    <Compile Include="IRulePersistence.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SoftChess.Inc.Core\SoftChess.Inc.Core.csproj">
+      <Project>{4fada86e-8ac0-47bd-972b-b9562304ed73}</Project>
+      <Name>SoftChess.Inc.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SoftChess.Inc.Data\SoftChess.Inc.Data.csproj">
+      <Project>{69320531-6d23-4714-9ca0-c180c2e1f3eb}</Project>
+      <Name>SoftChess.Inc.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

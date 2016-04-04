@@ -96,7 +96,7 @@ namespace SoftChess.Inc.Core.DataContracts
                     direction = startPosition.X < endPosition.X ? MovementDirection.Right : MovementDirection.Left;
                 }
 
-                if (Math.Abs( endPosition.X - startPosition.X).Equals(Math.Abs(endPosition.Y - startPosition.Y)))
+                if (Math.Abs(endPosition.X - startPosition.X).Equals(Math.Abs(endPosition.Y - startPosition.Y)))
                     direction = MovementDirection.Diagonal;
 
                 if (((Math.Abs(startPosition.X - endPosition.X) == 2) &&
