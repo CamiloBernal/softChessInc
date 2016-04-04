@@ -7,17 +7,17 @@ namespace SoftChess.Inc.Core.DataContracts
     public class PieceRuleSet
     {
         /// <summary>
-        /// Piece for which the rules apply
+        ///     Piece for which the rules apply
         /// </summary>
         public Piece ForPiece { get; set; }
 
         /// <summary>
-        /// List of rules for piece movement.
+        ///     List of rules for piece movement.
         /// </summary>
         public IList<MovementRule> Rules { get; } = new List<MovementRule>();
 
         /// <summary>
-        /// This method evaluates all rules for piece an return if all rules returned is valid.
+        ///     This method evaluates all rules for piece an return if all rules returned is valid.
         /// </summary>
         /// <param name="startPosition">Current piece position</param>
         /// <param name="endPosition">Future piece position</param>
@@ -26,7 +26,9 @@ namespace SoftChess.Inc.Core.DataContracts
         {
             var isValid = false;
             var lastMessage = string.Empty;
-            foreach (var validationResult in Rules.Select(rule => rule.MovementIsValidBasedOnRule(startPosition, endPosition)))
+            foreach (
+                var validationResult in
+                    Rules.Select(rule => rule.MovementIsValidBasedOnRule(startPosition, endPosition)))
             {
                 isValid = isValid || validationResult.Item1;
                 lastMessage = validationResult.Item2;
@@ -34,16 +36,13 @@ namespace SoftChess.Inc.Core.DataContracts
             return Tuple.Create(isValid, lastMessage);
         }
 
-
-
         /// <summary>
-        /// Get all available piece movements based on all rules.
+        ///     Get all available piece movements based on all rules.
         /// </summary>
         /// <param name="startPosition">Current piece position</param>
         /// <returns>List of all available movements for piece</returns>
         public IEnumerable<Position> GetAvailableMovements(Position startPosition)
         {
-
             //var rookRuleUp = new MovementRule
             //{
             //    AllowedDirection = MovementDirection.Up,
@@ -67,7 +66,6 @@ namespace SoftChess.Inc.Core.DataContracts
             //    AllowedBlocksToMove = Constants.BlockMovementWildcard
             //};
 
-
             //Rules.Add(rookRuleUp);
             //Rules.Add(rookRuleDown);
             //Rules.Add(rookRuleLeft);
@@ -76,19 +74,15 @@ namespace SoftChess.Inc.Core.DataContracts
             //var start = new Position(3,4);
             //var end = new Position(3,5);
 
-
-
             var posibleMovements = GetPosibleMovements();
             //return (from movement in posibleMovements where !movement.Equals(startPosition) let isValid = MovementIsValid(startPosition, movement).Item1 where isValid select movement).ToList();
 
             var p = posibleMovements.Where(m => !m.Equals(startPosition) && MovementIsValid(startPosition, m).Item1);
             return p;
-
-
         }
 
         /// <summary>
-        /// Get the posible movements in chess board. All unvalidated.
+        ///     Get the posible movements in chess board. All unvalidated.
         /// </summary>
         /// <returns>Complete Chess board based on limits</returns>
         private static IEnumerable<Position> GetPosibleMovements()

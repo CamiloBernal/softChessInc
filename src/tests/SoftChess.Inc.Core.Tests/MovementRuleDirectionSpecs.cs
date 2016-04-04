@@ -13,7 +13,7 @@ namespace SoftChess.Inc.Core.Tests
             const MovementDirection expected = MovementDirection.None;
             ConfigTest();
             Assert.AreEqual(expected, MovementDirection);
-        }   
+        }
 
         protected override void ConfigTest()
         {

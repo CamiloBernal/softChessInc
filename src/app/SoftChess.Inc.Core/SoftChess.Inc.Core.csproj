@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="DataContracts\HistoricalMovement.cs" />
     <Compile Include="DataContracts\MovementDirection.cs" />
     <Compile Include="DataContracts\MovementRule.cs" />
     <Compile Include="DataContracts\PieceRuleSet.cs" />

@@ -10,22 +10,22 @@ namespace SoftChess.Inc.Data.DataProxies.Mongo.PersistenceServices
 {
     public abstract class PersistenceServiceBase : IDataProxy
     {
+        protected readonly MongoDbHelper DbHelper;
+
         // ReSharper disable once InconsistentNaming
         protected bool _initialized;
 
-        protected PersistenceServiceBase(DbSettings<MongoDbSettings> settings, MongoDbHelper dbHelper)
+        protected PersistenceServiceBase(DbSettings<MongoDbSettings> settings)
         {
             if (settings == null) throw new ArgumentNullException(nameof(settings));
-            if (dbHelper == null) throw new ArgumentNullException(nameof(settings));
-            DbHelper = dbHelper;
+            DbHelper = new MongoDbHelper(settings);
             Settings = settings;
-
             Configure();
         }
 
-        protected MongoDbHelper DbHelper { get; }
-
         protected DbSettings<MongoDbSettings> Settings { get; }
+
+        public bool Initialized => _initialized;
 
         public virtual void Initialize()
         {
@@ -38,8 +38,6 @@ namespace SoftChess.Inc.Data.DataProxies.Mongo.PersistenceServices
             }
             _initialized = true;
         }
-
-        public bool Initialized => _initialized;
 
         protected void Configure()
         {
