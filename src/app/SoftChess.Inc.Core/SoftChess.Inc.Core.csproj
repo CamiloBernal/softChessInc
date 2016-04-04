@@ -43,6 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="DataContracts\MovementDirection.cs" />
+    <Compile Include="DataContracts\MovementRule.cs" />
+    <Compile Include="DataContracts\PieceRuleSet.cs" />
+    <Compile Include="DataContracts\Piece.cs" />
+    <Compile Include="DataContracts\PieceColor.cs" />
+    <Compile Include="DataContracts\PieceType.cs" />
+    <Compile Include="DataContracts\Position.cs" />
+    <Compile Include="Extensions\PositionExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

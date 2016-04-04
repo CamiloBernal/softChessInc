@@ -27,23 +27,23 @@ namespace SoftChess.Inc.Data.DataProxies.Mongo.PersistenceServices
 
         protected DbSettings<MongoDbSettings> Settings { get; }
 
-        protected void Configure()
-        {
-            Initialize();
-        }
-
         public virtual void Initialize()
         {
             RegisterConventions.RegisterMongoConventions();
             //Register the GUID representation to String
-            var guidSerializer = (GuidSerializer)BsonSerializer.LookupSerializer(typeof(Guid));
+            var guidSerializer = (GuidSerializer) BsonSerializer.LookupSerializer(typeof (Guid));
             if (guidSerializer == null)
             {
-                BsonSerializer.RegisterSerializer(typeof(Guid), new GuidSerializer(BsonType.String));
+                BsonSerializer.RegisterSerializer(typeof (Guid), new GuidSerializer(BsonType.String));
             }
             _initialized = true;
         }
 
         public bool Initialized => _initialized;
+
+        protected void Configure()
+        {
+            Initialize();
+        }
     }
 }
