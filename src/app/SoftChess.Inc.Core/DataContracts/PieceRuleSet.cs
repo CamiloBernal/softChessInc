@@ -14,7 +14,7 @@ namespace SoftChess.Inc.Core.DataContracts
         /// <summary>
         ///     List of rules for piece movement.
         /// </summary>
-        public IList<MovementRule> Rules { get; } = new List<MovementRule>();
+        public List<MovementRule> Rules { get; private set; } = new List<MovementRule>();
 
         /// <summary>
         ///     This method evaluates all rules for piece an return if all rules returned is valid.

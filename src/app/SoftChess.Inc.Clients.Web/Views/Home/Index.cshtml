@@ -1,0 +1,48 @@
+﻿@using System.Configuration
+
+@{
+    ViewBag.Title = "Game Board";
+}
+
+@section styles{
+    @Styles.Render("~/Content/css/chessboardjs")
+}
+
+
+
+@section pageHeader{
+
+<div class="jumbotron">
+    <div class="container">
+        <h1>SoftChess Inc</h1>
+        <p>This is a sample application for test Web Api for Chess Game Rules</p>
+        <p><a class="btn btn-primary btn-lg" href="https://github.com/CamiloBernal/softChessInc" role="button"><i class="fa fa-github-alt fa-fw"></i>View on GitHub &raquo;</a></p>
+    </div>
+</div>
+
+}
+
+<div class="row">
+
+    <div class="col-md-5 col-md-offset-2" id="chessBoard"></div>
+    <div class="col-md-4 col-md-offset-1 hidden console">
+        <div class="alert alert-danger fade in">
+            <strong>Error!</strong> <span id="errorMessage"></span>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+@section scripts{
+    @Scripts.Render("~/bundles/chessboardjs")
+
+    <script>
+        var webApiPath = '@ConfigurationManager.AppSettings["WebApiPath"]';
+    </script>
+    <script src="/sripts/index.js"></script>
+    
+
+}

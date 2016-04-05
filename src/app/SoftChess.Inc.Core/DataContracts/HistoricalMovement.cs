@@ -23,5 +23,16 @@ namespace SoftChess.Inc.Core.DataContracts
         ///     Piece position after movement
         /// </summary>
         public Position ToPosition { get; set; }
+
+        public static explicit operator HistoricalMovement(RuleValidationRequest source) => new HistoricalMovement
+        {
+            Piece = new Piece
+            {
+                PieceType = source.PieceType
+            },
+            ToPosition = source.NextPosition,
+            FromPosition = source.CurrentPosition,
+            MovementDate = DateTime.Now
+        };
     }
 }
