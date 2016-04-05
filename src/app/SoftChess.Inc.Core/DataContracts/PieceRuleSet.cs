@@ -43,42 +43,8 @@ namespace SoftChess.Inc.Core.DataContracts
         /// <returns>List of all available movements for piece</returns>
         public IEnumerable<Position> GetAvailableMovements(Position startPosition)
         {
-            //var rookRuleUp = new MovementRule
-            //{
-            //    AllowedDirection = MovementDirection.Up,
-            //    AllowedBlocksToMove = Constants.BlockMovementWildcard
-            //};
-            //var rookRuleDown = new MovementRule
-            //{
-            //    AllowedDirection = MovementDirection.Down,
-            //    AllowedBlocksToMove = Constants.BlockMovementWildcard
-            //};
-
-            //var rookRuleLeft = new MovementRule
-            //{
-            //    AllowedDirection = MovementDirection.Left,
-            //    AllowedBlocksToMove = Constants.BlockMovementWildcard
-            //};
-
-            //var rookRuleRight = new MovementRule
-            //{
-            //    AllowedDirection = MovementDirection.Right,
-            //    AllowedBlocksToMove = Constants.BlockMovementWildcard
-            //};
-
-            //Rules.Add(rookRuleUp);
-            //Rules.Add(rookRuleDown);
-            //Rules.Add(rookRuleLeft);
-            //Rules.Add(rookRuleRight);
-
-            //var start = new Position(3,4);
-            //var end = new Position(3,5);
-
             var posibleMovements = GetPosibleMovements();
-            //return (from movement in posibleMovements where !movement.Equals(startPosition) let isValid = MovementIsValid(startPosition, movement).Item1 where isValid select movement).ToList();
-
-            var p = posibleMovements.Where(m => !m.Equals(startPosition) && MovementIsValid(startPosition, m).Item1);
-            return p;
+            return posibleMovements.Where(m => !m.Equals(startPosition) && MovementIsValid(startPosition, m).Item1);
         }
 
         /// <summary>

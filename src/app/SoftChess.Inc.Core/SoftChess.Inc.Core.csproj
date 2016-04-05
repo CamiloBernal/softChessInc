@@ -52,6 +52,8 @@
     <Compile Include="DataContracts\PieceColor.cs" />
     <Compile Include="DataContracts\PieceType.cs" />
     <Compile Include="DataContracts\Position.cs" />
+    <Compile Include="DataContracts\RuleValidationRequest.cs" />
+    <Compile Include="DataContracts\RuleValidationResponse.cs" />
     <Compile Include="Extensions\PositionExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
