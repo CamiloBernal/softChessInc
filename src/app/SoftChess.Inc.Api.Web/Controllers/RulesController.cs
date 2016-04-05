@@ -10,15 +10,18 @@ namespace SoftChess.Inc.Api.Web.Controllers
 {
     public class RulesController : ApiController
     {
+        private readonly IHistoricalPersistence _historicalPersistence;
         private readonly IRulePersistence _ruleDbContext;
 
-        public RulesController(IRulePersistence ruleDbContext)
+        public RulesController(IRulePersistence ruleDbContext, IHistoricalPersistence historicalPersistence)
         {
             if (ruleDbContext == null) throw new ArgumentNullException(nameof(ruleDbContext));
+            if (historicalPersistence == null) throw new ArgumentNullException(nameof(historicalPersistence));
             _ruleDbContext = ruleDbContext;
+            _historicalPersistence = historicalPersistence;
         }
 
-        [HttpGet]
+        [HttpPost]
         public async Task<HttpResponseMessage> Get([FromBody] RuleValidationRequest validationRequest)
         {
             var pieceRuleSet =
@@ -27,6 +30,8 @@ namespace SoftChess.Inc.Api.Web.Controllers
                 validationRequest.NextPosition);
             if (validationResult.Item1)
             {
+                var movement = (HistoricalMovement) validationRequest;
+                await _historicalPersistence.RegisterPieceMovementAsync(movement).ConfigureAwait(false);
                 return Request.CreateResponse(HttpStatusCode.OK, new RuleValidationResponse
                 {
                     Message = "Ok"
