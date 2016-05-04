@@ -1,0 +1,32 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+html, body, div, a, ul, li, p, span {
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #EEEEEE;
+    font-size: 100%;
+    padding-top: 1%;
+    padding-right: 5%;
+    text-align: right;
+    width: 100%;
+    border-top: solid 1px #2F9CDF;
+}

@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>@ViewBag.Title - SoftChess Inc</title>
+    <meta name="description" content="SoftChess Inc">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    @Styles.Render("~/Content/css")
+    @RenderSection("styles", required: false)
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+
+                <a class="navbar-brand" href="#">SoftChess Inc</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+
+
+    @RenderSection("pageHeader", required: false)
+
+
+
+    <div class="container">
+
+        @RenderBody()
+        <hr>
+
+    </div> <!-- /container -->
+    <footer>
+        <p>&copy; SoftChess Inc 2015</p>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
